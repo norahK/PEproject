@@ -1,25 +1,29 @@
 package qrcure.qrcure;
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.app.TabActivity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.util.*;
 
-public class MainActivity extends AppCompatActivity {
+import static android.R.id.tabhost;
+
+public class Main_Patient extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.patient_main);
 
 
-        final TabHost tabHost = home;//getTabHost();
+          String in="my message";
 
+        final TabHost tabHost =(TabHost)findViewById(R.id.tabhost);
+        tabHost.setup();
+
+        //home
         TabHost.TabSpec Dayspec = tabHost.newTabSpec("home");
         Dayspec.setIndicator("home");
         Intent intentDay = new Intent(this, home.class);
@@ -42,23 +46,23 @@ public class MainActivity extends AppCompatActivity {
         }
 
         tabHost.getTabWidget().getChildAt(0)
-                .setBackgroundResource(R.mipmap.btmbtnslct);
+                .setBackgroundResource(R.mipmap.ic_launcher);
         tabHost.getTabWidget().getChildAt(1)
-                .setBackgroundResource(R.mipmap.btmbtnunslct);
+                .setBackgroundResource(R.mipmap.ic_launcher_round);
         tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
 
             public void onTabChanged(String tabId) {
                 if (TextUtils.equals(tabId, "Tab1")) {
                     tabHost.getTabWidget().getChildAt(0)
-                            .setBackgroundResource(R.mipmap.btmbtnslct);
+                            .setBackgroundResource(R.mipmap.ic_launcher);
                     tabHost.getTabWidget().getChildAt(1)
-                            .setBackgroundResource(R.mipmap.btmbtnunslct);
+                            .setBackgroundResource(R.mipmap.ic_launcher_round);
 
                 } else if (TextUtils.equals(tabId, "Tab2")) {
                     tabHost.getTabWidget().getChildAt(0)
-                            .setBackgroundResource(R.mipmap.btmbtnunslct);
+                            .setBackgroundResource(R.mipmap.ic_launcher_round);
                     tabHost.getTabWidget().getChildAt(1)
-                            .setBackgroundResource(R.mipmap.btmbtnslct);
+                            .setBackgroundResource(R.mipmap.ic_launcher);
                 }
 
             }
@@ -70,5 +74,6 @@ public class MainActivity extends AppCompatActivity {
         // TODO Auto-generated method stub
         super.onBackPressed();
     }
-    }
+
 }
+

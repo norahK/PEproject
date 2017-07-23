@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main_Patient">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,8 @@
         <activity android:name=".profile" />
         <activity android:name=".home" />
         <activity android:name=".camera" />
-        <activity android:name=".notification"></activity>
+        <activity android:name=".notification" />
+        <activity android:name="qrcure.doctor.doctor_main" />
     </application>
 
 </manifest>
