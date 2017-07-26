@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Phome"
+        android:icon="@drawable/homeicon"
+        android:title="home"
+        />
+    <item
+        android:id="@+id/Pscanner"
+        android:icon="@drawable/ic_center_focus"
+        android:title="scanner"
+        />
+    <item
+        android:id="@+id/Pnotification"
+        android:icon="@drawable/notificationsiconicon"
+        android:title="notification"
+        />
+    <item
+        android:id="@+id/Pprofile"
+        android:icon="@drawable/ic_assignment_ind_black_24dp"
+        android:title="profile"
+        />
+</menu>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="qrcure.qrcure.patient.Main_Patient">
+    tools:context="qrcure.qrcure.MainActivity">
+
 
 
     <RelativeLayout
@@ -47,7 +48,7 @@
                 android:id="@+id/bottomNavView_bar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:menu="@menu/patient_bottom_menu">
+                app:menu="@menu/bottom_navigation_menu">
 
 
             </android.support.design.widget.BottomNavigationView>

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="qrcure.qrcure">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,18 +13,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main_Patient">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".profile" />
-        <activity android:name=".home" />
-        <activity android:name=".camera" />
-        <activity android:name=".notification" />
-        <activity android:name="qrcure.doctor.doctor_main" />
+        <activity android:name=".scanner" />
+        <activity android:name=".visitor_search" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <activity android:name=".patient.viewIByPatient" />
+        <activity android:name=".patient.home" />
+        <activity android:name=".patient.notification" />
+        <activity android:name=".patient.Main_Patient" />
+        <activity android:name=".patient.profile" />
+        <activity android:name=".doctor.Main_doctor" />
+        <activity android:name=".doctor.dhome" />
+        <activity android:name=".doctor.dadd" />
+        <activity android:name=".doctor.dnotification" />
+        <activity android:name=".doctor.dprofile"></activity>
     </application>
 
 </manifest>
