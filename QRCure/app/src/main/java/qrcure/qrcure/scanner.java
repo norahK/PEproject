@@ -62,7 +62,7 @@ tonext=(Button)findViewById(R.id.button2);
         tonext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               in=new Intent(scanner.this,viewIByPatient.class);
+               in=new Intent(scanner.this,retrive_data_test.class);//viewIByPatient.class);
                 //pass info to othe page
                 in.putExtra("input","test");//name+value to spasifay
                 startActivity(in);
