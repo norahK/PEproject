@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QRCuretest</string>
+    <string name="app_name">QRCure</string>
     <string name="title_activity_doctor">Doctor</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>

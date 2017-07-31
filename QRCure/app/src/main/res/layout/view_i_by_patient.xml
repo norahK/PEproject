@@ -43,7 +43,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:text="Name" />
+                    android:text="the Helth Education Staff"
+                    android:onClick="gotoDprofilepage"
+                    />
 
                 <TextView
                     android:id="@+id/welcom"
@@ -79,8 +81,9 @@
                 <ImageButton
                     android:id="@+id/like"
                     style="@android:style/Widget.DeviceDefault.ImageButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="69dp"
+                    android:layout_height="match_parent"
+                    android:onClick="like"
                     app:srcCompat="@drawable/like" />
 
                 <ImageButton
@@ -110,21 +113,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/related_T"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/relatedTopicT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="related topics" />
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/Related_Topics"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -132,25 +120,33 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/related_top_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/button"
+                <TextView
+                    android:id="@+id/relatedTopicT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="related topics" />
 
-                <Button
-                    android:id="@+id/button2"
+                <LinearLayout
+                    android:id="@+id/related_top_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Button" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -163,25 +159,34 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/commentTop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Comments " />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/comments"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <ListView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/commentTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Comments " />
+
+                <LinearLayout
+                    android:id="@+id/comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

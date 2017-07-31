@@ -1,50 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="15dp"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:paddingTop="15dp"
+    android:orientation="vertical"
     tools:context="qrcure.qrcure.scanner">
 
+    <!-- android:layout_contenerInParent="true" in saide sv-->
     <TextView
         android:id="@+id/hint"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:text="foucus the camera on QR code plz"
         android:textColor="@color/scanner_hint" />
-    <!-- android:layout_contenerInParent="true" in saide sv-->
+
     <SurfaceView
         android:id="@+id/cameraView"
         android:layout_width="match_parent"
-        android:layout_height="480px"
+        android:layout_height="900px"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="65dp"
-        android:textColor="@color/scanner_hint"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="to instruction " />
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
-        android:text=""
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
         android:textColor="@color/scanner_hint" />
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -109,4 +100,4 @@
 
 
 
-</RelativeLayout>
+</LinearLayout>
